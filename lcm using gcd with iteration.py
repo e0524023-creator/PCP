@@ -8,11 +8,11 @@ def lcm(a,b):
     gcd_result,gcd_iterations=gcd_with_count(a,b)
     product=a*b
     lcm_result=product//gcd_result
-    return lcm_result,gcd_iterations
+    return lcm_result,gcd_iterations,gcd_result
 def display_lcm_and_gcd_count(num1,num2):
-    lcm_result,gcd_iterations=lcm(num1,num2)
+    lcm_result,gcd_iterations,gcd_result=lcm(num1,num2)
     print(f"The LCM of {num1} and {num2} is: {lcm_result}")
-    print(f"The GCD of {num1} and {num2} required {gcd_iterations} iterations to compute")
+    print(f"The GCD of {num1} and {num2} is {gcd_result} and it requires {gcd_iterations} iterations to compute")
 num1=48
 num2=18
 display_lcm_and_gcd_count(num1,num2)
